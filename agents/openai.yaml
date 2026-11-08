@@ -1,0 +1,5 @@
+interface:
+  display_name: "Frontend"
+  short_description: "自動選用前端技能，保存並重用已認可的介面設計做法與互動流程"
+policy:
+  allow_implicit_invocation: true

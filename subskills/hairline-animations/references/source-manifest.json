@@ -1,0 +1,17 @@
+{
+  "package": "@lucasmarkes/hairline",
+  "version": "0.5.0",
+  "repository": "https://github.com/lucasmarkes/hairline",
+  "license": "MIT",
+  "files": {
+    "assets/hairline/LICENSE": "948d56f0bc8c383c04c453136dcfb78407f97de65ff8bb4fabff2b79ddd17f59",
+    "assets/hairline/README.md": "e3b9b0fe29ba4cbd251a060b0df78e10a9c12d74d0952a6fa00316e265d12976",
+    "assets/hairline/package.json": "e0a3fa4f0e65d00902994429ee8f796acd77873c8dbc7f09a1e89dc25fcd8b32",
+    "assets/hairline/dist/index.js": "175f6d6382b8ffbb57b55412315875b33ea3732dbcd68464304d3106052b4ebe",
+    "assets/hairline/dist/index.js.map": "0c4d8e80cff4715baf60e904eed7e8e88c2edd4d5240b4b9c0c4512c41f22695",
+    "assets/hairline/dist/index.d.ts": "1b9cff94ef916f30867c4dcf366424df6978c753e949c9822845e4d75309137a",
+    "assets/hairline/dist/react.js": "a97c436b6df80c8dfe6f6b755f1312f6f6dbab96e49fca19b1dbc83a085bff38",
+    "assets/hairline/dist/react.js.map": "d05e9f5ee992ba05904c86b599c37f399812727ac18b3045b80965b562acfb2a",
+    "assets/hairline/dist/react.d.ts": "cac485fe2ac08933119d69d8105583bc386b62ceee6631487d34c9544c42a82f"
+  }
+}

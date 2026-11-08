@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hairline · 33 built-in figures</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px 20px; background: #08090a; color: #d0d6e0; font: 15px/1.6 system-ui,sans-serif; }
+  main { max-width: 880px; margin: auto; }
+  h1 { font-size: 24px; margin: 0; } p { color: #9ca6b4; }
+  .controls { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin: 22px 0; }
+  label { display: flex; gap: 8px; align-items: center; }
+  select,button { font: inherit; background: #181b20; color: inherit; border: 1px solid #46505e; border-radius: 6px; padding: 7px; }
+  select:focus-visible,input:focus-visible { outline: 2px solid #75d5b5; outline-offset: 4px; }
+  #figure { width: 100%; max-width: 660px; aspect-ratio: 5/4; margin: auto; }
+  #intensity { width: 110px; } code { font-size: 12px; white-space: pre-wrap; }
+  [data-theme="light"] body { background: #fff; color: #232327; }
+  [data-theme="light"] p { color: #52525b; }
+  [data-theme="light"] select { background: #fafafa; border-color: #a4a4ac; }
+</style>
+<main>
+  <h1>Hairline · 33 種內建動畫</h1>
+  <p>0.5.0 · 本機離線圖庫 · 選擇動畫後可直接用滑鼠互動</p>
+  <div class="controls">
+    <label>動畫 <select id="name" aria-label="動畫"></select></label>
+    <label>強度 <input id="intensity" type="range" min="0" max="1" step="0.05" value="0.35"><output id="value">0.35</output></label>
+    <label>主題 <select id="theme"><option value="dark">深色</option><option value="light">淺色</option></select></label>
+    <label><input id="play" type="checkbox" checked>自動播放</label>
+  </div>
+  <div id="figure"></div>
+  <p id="description"></p><p id="behavior"></p><code id="snippet"></code>
+  <p id="error" role="alert"></p>
+</main>
+<script type="module">
+  const el = id => document.getElementById(id);
+  try {
+    const library = await import('./hairline.js');
+    const catalog = await (await fetch('./figures.json')).json();
+    for (const item of catalog) el('name').add(new Option(item.component, item.name));
+    el('name').value = 'settle';
+    let figure;
+    const motion = matchMedia('(prefers-reduced-motion: reduce)');
+    const options = () => ({ intensity: Number(el('intensity').value), theme: el('theme').value, play: el('play').checked && !document.hidden && !motion.matches });
+    const update = () => {
+      document.documentElement.dataset.theme = el('theme').value;
+      el('value').value = el('intensity').value;
+      figure?.update(options());
+    };
+    const mount = () => {
+      figure?.destroy();
+      const item = catalog.find(item => item.name === el('name').value);
+      figure = library[item.name](el('figure'), { ...options(), label: item.description });
+      el('description').textContent = item.description;
+      el('behavior').textContent = 'Intensity: ' + item.intensity;
+      el('snippet').textContent = `import { ${item.component} } from '@lucasmarkes/hairline/react';\n<${item.component} intensity={0.35} play={false} />`;
+    };
+    el('name').addEventListener('change', mount);
+    el('theme').addEventListener('change', update);
+    el('intensity').addEventListener('input', update);
+    el('play').addEventListener('change', update);
+    document.addEventListener('visibilitychange', update);
+    motion.addEventListener('change', update);
+    window.addEventListener('pagehide', () => figure?.destroy(), { once: true });
+    mount();
+  } catch (cause) { el('error').textContent = 'Gallery failed: ' + cause.message; console.error(cause); }
+</script>
+</html>

@@ -1,0 +1,233 @@
+[
+  {
+    "name": "riffle",
+    "component": "Riffle",
+    "description": "A tray of eight cards. The card under the pointer stands up; the arrow keys walk the cards.",
+    "intensity": "The ripple spreads further from the pulled card.",
+    "tags": "cards files browse 卡片 文件 瀏覽"
+  },
+  {
+    "name": "terrain",
+    "component": "Terrain",
+    "description": "Eighty-one pillars on a plinth that rise around the pointer.",
+    "intensity": "A wider area rises.",
+    "tags": "landscape field 地形 場域"
+  },
+  {
+    "name": "exploded",
+    "component": "Exploded",
+    "description": "An app window in four layers. Moving across opens the gap; moving down picks a layer.",
+    "intensity": "The layers open further.",
+    "tags": "layers architecture 圖層 架構"
+  },
+  {
+    "name": "phosphor",
+    "component": "Phosphor",
+    "description": "A dot matrix that plays a loop, and fades like phosphor where the pointer paints it.",
+    "intensity": "The trail lingers longer.",
+    "tags": "matrix pixels 點陣 軌跡"
+  },
+  {
+    "name": "slow",
+    "component": "Slow",
+    "description": "Crates riding a belt through a gate. Hovering slows the clock without stopping it.",
+    "intensity": "Time slows down more.",
+    "tags": "conveyor pace rate 輸送帶 速度 節奏"
+  },
+  {
+    "name": "turntable",
+    "component": "Turntable",
+    "description": "Blocks on a turntable. A flick spins it; it settles on the nearest quarter turn.",
+    "intensity": "The spin coasts longer.",
+    "tags": "rotate showcase 旋轉 展示"
+  },
+  {
+    "name": "keyboard",
+    "component": "Keyboard",
+    "description": "A sixty-key board. The key under the pointer sinks, and its neighbours follow it down.",
+    "intensity": "A wider patch of keys sinks.",
+    "tags": "input typing 鍵盤 輸入"
+  },
+  {
+    "name": "elevator",
+    "component": "Elevator",
+    "description": "Four floors beside an open shaft. The pointer's height picks a floor; the car travels there.",
+    "intensity": "The car travels faster between floors.",
+    "tags": "floors navigation 樓層 導覽"
+  },
+  {
+    "name": "phone",
+    "component": "Phone",
+    "description": "A phone in layers: glass, board, battery, shell. Moving across opens the gap; moving down picks a layer.",
+    "intensity": "The layers open further.",
+    "tags": "device layers 手機 圖層"
+  },
+  {
+    "name": "laptop",
+    "component": "Laptop",
+    "description": "A thin laptop, open on its hinge. The pointer's height sets the lid; it follows on a spring.",
+    "intensity": "The lid opens wider.",
+    "tags": "device open 筆電 開合"
+  },
+  {
+    "name": "terminal",
+    "component": "Terminal",
+    "description": "A terminal window with its history in rows. The pointer's height scrolls back; the line under it lifts and its neighbours follow.",
+    "intensity": "The lift spreads further.",
+    "tags": "history command 終端 歷史"
+  },
+  {
+    "name": "cabinet",
+    "component": "Cabinet",
+    "description": "A rack of twelve blades, a few half out. The pointer's height pulls the nearest ones out, the farther the less.",
+    "intensity": "More blades come out.",
+    "tags": "server rack 伺服器 機櫃"
+  },
+  {
+    "name": "branches",
+    "component": "Branches",
+    "description": "A commit graph with a branch forking off main and merging back. The commit under the pointer rises, and its history rises after it.",
+    "intensity": "More of the history rises.",
+    "tags": "git commit merge 分支 合併"
+  },
+  {
+    "name": "vault",
+    "component": "Vault",
+    "description": "A vault door with a dial and three bolts. The pointer turns the dial; detents catch every ten, and on the combination the bolts draw back.",
+    "intensity": "The dial coasts longer.",
+    "tags": "safe lock 金庫 鎖"
+  },
+  {
+    "name": "lockers",
+    "component": "Lockers",
+    "description": "A bank of twelve lockers, one ajar at rest. The locker under the pointer opens; the one at rest closes.",
+    "intensity": "The door opens wider.",
+    "tags": "storage compartments 置物櫃 收納"
+  },
+  {
+    "name": "padlock",
+    "component": "Padlock",
+    "description": "A padlock with its shackle in. As the pointer comes near the shackle lifts out and swings open.",
+    "intensity": "The shackle swings further.",
+    "tags": "security access 安全 解鎖"
+  },
+  {
+    "name": "patch",
+    "component": "Patch",
+    "description": "A patch panel of twenty-four ports with cables. The cable under the pointer lifts and its neighbours lean away.",
+    "intensity": "The lean spreads further.",
+    "tags": "ports cables 連接 埠"
+  },
+  {
+    "name": "dish",
+    "component": "Dish",
+    "description": "A parabolic dish on a two-axis gimbal. The pointer aims the dish; it follows on a spring.",
+    "intensity": "The dish swings further.",
+    "tags": "signal aim 天線 訊號"
+  },
+  {
+    "name": "router",
+    "component": "Router",
+    "description": "A router with its antennas up. Each antenna leans toward the pointer, the nearest most.",
+    "intensity": "The lean spreads further.",
+    "tags": "network wifi 網路 路由器"
+  },
+  {
+    "name": "loupe",
+    "component": "Loupe",
+    "description": "A stand loupe on a blank ruled sheet. The pointer drags it across; the rules pass enlarged under the glass, with nothing between them.",
+    "intensity": "The glass magnifies more.",
+    "tags": "inspect search 放大 檢視"
+  },
+  {
+    "name": "sieve",
+    "component": "Sieve",
+    "description": "Three test sieves stacked over a pan. The pointer's height picks one; it rises clear of the stack, and every mesh is bare.",
+    "intensity": "The gap opens further.",
+    "tags": "filter 篩選 過濾"
+  },
+  {
+    "name": "rail",
+    "component": "Rail",
+    "description": "A garment rail with seven bare hangers. The pointer brushes them; each rocks away, the nearest most, and settles.",
+    "intensity": "The brush reaches more hangers.",
+    "tags": "garment hangers 衣架"
+  },
+  {
+    "name": "plug",
+    "component": "Plug",
+    "description": "A wall socket, and a plug lying on the floor at the end of its cord. The pointer draws the plug up toward the socket; it stops short, and falls back.",
+    "intensity": "The plug comes closer to the socket.",
+    "tags": "connection 插頭 連接"
+  },
+  {
+    "name": "query",
+    "component": "Query",
+    "description": "A question mark built as a bent bar over a loose ball. The hook turns toward the pointer, and the ball rolls after it.",
+    "intensity": "The hook turns further.",
+    "tags": "question help 問題"
+  },
+  {
+    "name": "drawer",
+    "component": "Drawer",
+    "description": "A cabinet of three drawers. The pointer's height picks one; it slides out and shows two dividers with nothing between them.",
+    "intensity": "The drawer opens further.",
+    "tags": "files storage 文件 抽屜"
+  },
+  {
+    "name": "basket",
+    "component": "Basket",
+    "description": "A wire basket under a bail handle. It tilts toward the pointer and shows its bare floor; the handle swings after it.",
+    "intensity": "The basket tilts further.",
+    "tags": "shopping cart 購物 籃子"
+  },
+  {
+    "name": "plot",
+    "component": "Plot",
+    "description": "A bar chart with seven flat tabs where the bars would stand. The pointer brushes them; each lifts a little and drops back to zero.",
+    "intensity": "The tabs lift higher.",
+    "tags": "chart bars 圖表 長條"
+  },
+  {
+    "name": "hub",
+    "component": "Hub",
+    "description": "A hub with eight tiles around it on dashed links. The tile under the pointer rises and its link turns solid.",
+    "intensity": "The tiles rise higher.",
+    "tags": "network center 中心 網路"
+  },
+  {
+    "name": "relay",
+    "component": "Relay",
+    "description": "A hub with four branches of tiles. The path to the leaf under the pointer lights hop by hop.",
+    "intensity": "Each hop waits longer.",
+    "tags": "branch path hops 分支 路徑 傳遞"
+  },
+  {
+    "name": "settle",
+    "component": "Settle",
+    "description": "Twelve tiles lie crooked round a hub. As the pointer nears it, they slide into a tree and the links draw in.",
+    "intensity": "The tree forms from further away.",
+    "tags": "organize consolidate 整理 整合 聚合"
+  },
+  {
+    "name": "format",
+    "component": "Format",
+    "description": "A file of ten crooked lines. The pointer runs the formatter down it, and every line above snaps square.",
+    "intensity": "The lines start more crooked.",
+    "tags": "format align document 排版 文件 對齊"
+  },
+  {
+    "name": "rebuild",
+    "component": "Rebuild",
+    "description": "A tree of packages. The one under the pointer rises, and every package that depends on it rises after it.",
+    "intensity": "The packages rise higher.",
+    "tags": "dependencies packages 依賴 套件"
+  },
+  {
+    "name": "stack",
+    "component": "Stack",
+    "description": "A call stack of five frames. The pointer's height picks one, and the frames above lift away to open it.",
+    "intensity": "The frames above lift further.",
+    "tags": "frames inspect 堆疊 檢視"
+  }
+]

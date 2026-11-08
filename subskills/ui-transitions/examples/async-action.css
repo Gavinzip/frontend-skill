@@ -1,0 +1,14 @@
+[data-action-state="pending"] {
+  cursor: progress;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-action-state="success"] {
+    animation: confirm-action 160ms ease-out both;
+  }
+
+  @keyframes confirm-action {
+    from { transform: scale(0.97); }
+    to { transform: scale(1); }
+  }
+}

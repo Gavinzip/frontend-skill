@@ -1,6 +1,6 @@
 ---
 name: frontend
-description: Build and verify website and app interfaces, including React components, UI transitions, scroll motion, WebGPU, 3D scenes, admin UI and agent chat. Route to bundled specialists for concrete examples and scripts. Also use to save or reuse approved frontend patterns.
+description: Build and verify website and app interfaces, including React components, theme controls, glass effects, UI transitions, scroll motion, WebGPU, 3D scenes, admin UI and agent chat. Route to bundled specialists for concrete examples and scripts. Also use to save or reuse approved frontend patterns.
 ---
 
 # Frontend
@@ -12,6 +12,8 @@ Identify the intended user experience, existing stack, accepted design and scope
 | Choose a visual direction, reproduce a reference, build a page, or work across web and mobile | [Product UI](references/product-ui.md) |
 | Build a hero, entry sequence, loading gate, scroll video or PRISM transition | [Website](subskills/website/SKILL.md) |
 | Choose a React Bits background, text effect, gallery or cursor | [ReactSkills](subskills/react-skills/SKILL.md) |
+| Build a draggable glass light/dark switch with pixel moon/sun particles or a moving edge light (玻璃開關、日月粒子) | [Glass Light Toggle](subskills/glass-light-toggle/SKILL.md) |
+| Make the actual page behind a glass overlay bend at its rim or show color dispersion (液態玻璃邊緣折射、色散) | [Liquid Glass edge refraction](assets/liquid-glass-edge-refraction/integration.md). Check the backdrop, browser support and CSP. |
 | Build async action feedback, disclosures, tabs or other state transitions | [UI Transitions](subskills/ui-transitions/SKILL.md) and [Amicro](subskills/amicro-micro-transitions/SKILL.md) for action-specific button motion |
 | Build admin tables, CRUD forms, settings or navigation | [Back-end UI](subskills/back-end-ui/SKILL.md) |
 | Build agent chat, streaming, tool activity or approvals | [Agent UI](subskills/agent-ui/SKILL.md) |
@@ -30,5 +32,3 @@ Identify the intended user experience, existing stack, accepted design and scope
 4. Validate the changed behavior through the normal product entry, including responsive and accessibility states that the change touches. Distinguish observed behavior from visual approval and from deployment status.
 
 When the user asks only for discussion or review, stay within the requested scope. A visual asset, a saved pattern, or a previous approval does not grant permission to publish, deploy, change unrelated designs, or reuse project-specific code elsewhere. Pure backend work and standalone film production have their own workflows.
-
-For an edge-refraction overlay specifically, the packaged [Liquid Glass implementation](assets/liquid-glass-edge-refraction/integration.md) supplies JavaScript and CSS. Check the target browser, backdrop and CSP before enabling it.

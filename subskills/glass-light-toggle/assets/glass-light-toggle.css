@@ -1,0 +1,136 @@
+.glass-light-toggle {
+  --glass-switch-width: 432px;
+  --p: 0;
+  --tile-inset: 2.8%;
+  --track-radius: 18% / 34%;
+  position: relative;
+  isolation: isolate;
+  direction: ltr;
+  display: block;
+  inline-size: min(var(--glass-switch-width), 100%);
+  aspect-ratio: 432 / 224;
+  min-block-size: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--track-radius);
+  background: transparent;
+  color: inherit;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glass-light-toggle[data-grabbed] { cursor: grabbing; }
+.glass-light-toggle:focus-visible { outline: 2px solid #8e91f5; outline-offset: 8px; }
+.glass-light-toggle:disabled { cursor: default; }
+
+.glass-light-toggle__track,
+.glass-light-toggle__material,
+.glass-light-toggle__light {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.glass-light-toggle__track { border-radius: var(--track-radius); }
+
+.glass-light-toggle__track--night {
+  background: linear-gradient(154deg, #101015 5%, #09090b 68%, #0a0a0d);
+  box-shadow: inset 3px 7px 18px #000c, inset 0 -1px 1px #ffffff19, 0 12px 32px #0005;
+  opacity: calc(1 - var(--p));
+}
+
+.glass-light-toggle__track--day {
+  background: linear-gradient(145deg, #d4d1cb, #eeece8 56%, #c9c5be);
+  box-shadow: inset 3px 7px 15px #4941373c, inset 0 -1px 2px #fffc, 0 18px 30px #34291940;
+  opacity: var(--p);
+}
+
+.glass-light-toggle__thumb {
+  position: absolute;
+  inset-block: 5.4%;
+  inset-inline-start: calc(var(--tile-inset) + var(--p) * (50% - var(--tile-inset) / 2));
+  inline-size: calc(50% - var(--tile-inset) * 1.5);
+  border-radius: 30%;
+  pointer-events: none;
+  backdrop-filter: blur(14px);
+}
+
+.glass-light-toggle__material--night {
+  background:
+    radial-gradient(ellipse at 50% 107%, #8a9dff 1%, #7285f2da 19%, transparent 51%),
+    linear-gradient(159deg, #ffffff2d, #ffffff11 54%, #5762ba53);
+  box-shadow: inset 1px 1px 3px #fff6, inset 0 -2px 5px #a9c7ffef, 0 14px 21px #0007;
+  opacity: calc(1 - var(--p));
+}
+
+.glass-light-toggle__material--day {
+  background:
+    radial-gradient(ellipse at 50% -14%, #ffbb3c 2%, #ffbd466f 33%, transparent 64%),
+    linear-gradient(147deg, #f8e6beaf, #fff9 46%, #fff5 72%, #d6d3cd80);
+  box-shadow: inset 0 2px 4px #fff2bd, inset 1px -1px 4px #fff8, -8px 16px 21px #463c3044;
+  opacity: var(--p);
+}
+
+.glass-light-toggle__light {
+  overflow: visible;
+  color: color-mix(in srgb, #789aff calc(100% * (1 - var(--p))), #ffa927);
+}
+
+.glass-light-toggle__thumb::before {
+  position: absolute;
+  inset: -61%;
+  content: '';
+  z-index: -1;
+  background: radial-gradient(ellipse 35% 30% at 50% calc(69% - 38% * var(--p)),
+    color-mix(in srgb, #789aff calc(100% * (1 - var(--p))), #ffa927) 0%, transparent 100%);
+  opacity: 0.47;
+  filter: blur(18px);
+}
+.glass-light-toggle__bloom {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 6;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 5px currentColor) drop-shadow(0 0 13px currentColor) drop-shadow(0 0 25px currentColor);
+}
+
+.glass-light-toggle__core {
+  fill: none;
+  stroke: color-mix(in srgb, #edf4ff calc(100% * (1 - var(--p))), #fff4d7);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+
+.glass-light-toggle__pixels {
+  position: absolute;
+  inset: 22%;
+  inline-size: 56%;
+  block-size: 56%;
+}
+
+.glass-light-toggle__symbol {
+  display: none;
+  position: absolute;
+  inset: 0;
+  place-items: center;
+  font: 600 clamp(20px, 7vw, 48px)/1 system-ui, sans-serif;
+  color: #f2e9dc;
+}
+
+.glass-light-toggle[aria-checked="false"] .glass-light-toggle__symbol { color: #332513; }
+.glass-light-toggle[data-static-symbol] .glass-light-toggle__symbol { display: grid; }
+
+@media (forced-colors: active) {
+  .glass-light-toggle { border: 2px solid ButtonText; }
+  .glass-light-toggle__track,
+  .glass-light-toggle__light,
+  .glass-light-toggle__material,
+  .glass-light-toggle__pixels,
+  .glass-light-toggle__thumb::before { display: none; }
+  .glass-light-toggle__thumb { border: 1px solid ButtonText; backdrop-filter: none; }
+  .glass-light-toggle .glass-light-toggle__symbol { display: grid; color: ButtonText; }
+  .glass-light-toggle:focus-visible { outline-color: Highlight; }
+}

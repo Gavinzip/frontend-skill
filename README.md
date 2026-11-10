@@ -12,14 +12,17 @@ Run this in your project. Add `-g` to install it for your Codex user. If you alr
 
 - 「幫我做品牌首頁，捲動時要能控制影片前進和倒退。」
 - 「修一下後台儲存按鈕，後端回傳成功後才顯示完成。」
+- 「做一個可拖曳的玻璃主題開關，日月用粒子變形。」
+- 「讓設定浮層後方的線條在玻璃邊緣彎折，帶一點色散。」
 - 「把這個我認可的互動做法存起來，下次同一個專案沿用。」
 
-[SKILL.md](SKILL.md) is the entry point. Its routing table links to every bundled subskill and tells the agent when to use it. The [Liquid Glass example](assets/liquid-glass-edge-refraction/integration.md) and design library tool are also included. Saving or searching local patterns uses Python 3.9 or newer.
+[SKILL.md](SKILL.md) is the entry point. Its routing table links to every bundled subskill and to the [Liquid Glass edge-refraction implementation](assets/liquid-glass-edge-refraction/integration.md) for overlays that bend the page behind them. Saving or searching local patterns uses Python 3.9 or newer.
 
 | Included subskills | Examples and tools |
 | --- | --- |
 | [Website](subskills/website/SKILL.md), [Website 3D](subskills/website-3d/SKILL.md), [img2threejs](subskills/img2threejs/SKILL.md) | Scroll video recipes, React PRISM source, scene template and procedural modeling scripts |
 | [ReactSkills](subskills/react-skills/SKILL.md), [UI Transitions](subskills/ui-transitions/SKILL.md), [Amicro](subskills/amicro-micro-transitions/SKILL.md) | Official React Bits registry lookup, an original async action example and MIT Amicro button examples |
+| [Glass Light Toggle](subskills/glass-light-toggle/SKILL.md) | Draggable day/night glass switch, pixel particle morph, portable JavaScript and CSS, and a standalone preview |
 | [GPU Effect](subskills/gpu-effect/SKILL.md), [Hairline Animations](subskills/hairline-animations/SKILL.md) | Pinned shader source and lookup, integration code, illustration catalog and local gallery |
 | [Agent UI](subskills/agent-ui/SKILL.md), [Back-end UI](subskills/back-end-ui/SKILL.md) | Local React primitives and lookup, admin shell and feature design patterns |
 | [Lieflat Charts](subskills/lieflat-charts/SKILL.md) | Chart and report templates and scripts under the included PolyForm Noncommercial terms |
